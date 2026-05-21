@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BloodBridge | Dashboard</title>
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="dashboard_styles.css">
+
+</head>
+<body>
+        <!-- NAVIGATION -->
+   <nav class="navbar">
+    <div class="logo">
+        <i class="fa-solid fa-heart-pulse"></i>
+        <div>
+            <h2>Blood <span>Bridge</span></h2>
+            <p>Connect. Donate. Save Lives.</p>
+        </div>
+    </div>
+
+    <div class="nav-links">
+        <a href="index.html">HOME</a>
+        <a href="emergency.html">EMERGENCY</a>
+        <a href="about.html">ABOUT</a>
+        <a href="helpcenter.html">HELP CENTER</a>
+        <a class="active" href="dashboard.html">DASHBOARD</a>
+    </div>
+
+    <div class="menu-toggle">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+
+    <button class="register-btn" onclick="window.location.href='register.html'">
+        <i class="fa-regular fa-user"></i>REGISTER
+    </button>
+</nav>
+
+    <!-- DASHBOARD -->
+    <section class="dashboard">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <div class="profile">
+                <div class="profile-image">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+
+                <h3><span id="userName"></span></h3>
+                <div class="profile-details">
+                    <p><i class="fa-solid fa-droplet"></i>
+                        <span id="userBlood"></span></p>
+                    <p><i class="fa-regular fa-envelope"></i>
+                        <span id="userEmail"></span></p>
+                    <p><i class="fa-solid fa-phone"></i>
+                        <span id="userPhone"></span></p>
+                    <p><i class="fa-solid fa-location-dot"></i>
+                        <span id="userLocation"></span></p>
+                    <p><i class="fa-regular fa-calendar"></i>
+                        <span id="userDob"></span></p>
+                </div>
+            </div>
+            <button class="logout-btn" onclick="logoutUser()">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>Logout
+            </button>
+        </aside>
+
+        <!-- MAIN -->
+        <main class="main-content">
+
+            <!-- TOP -->
+            <div class="welcome-hero">
+                <div class="hero-glow"></div>
+                <div class="hero-content">
+                    <p class="welcome-tag">DONOR DASHBOARD</p>
+
+                    <h1>Welcome Back</h1>
+                    <p class="welcome-subtext">
+                        Every donation you make gives someone another chance at life.
+                    </p>
+
+                    <div class="hero-stats">
+                        <div class="mini-stat">
+                            <i class="fa-solid fa-droplet"></i>
+                            <span>12 Donations</span>
+                        </div>
+
+                        <div class="mini-stat">
+                            <i class="fa-solid fa-heart"></i>
+                            <span>Active Donor</span>
+                        </div>
+
+                        <div class="mini-stat">
+                            <i class="fa-solid fa-award"></i>
+                            <span>Top Contributor</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- UPCOMING CAMP -->
+            <div class="single-card">
+                <div class="card-header">
+                    <h3>Upcoming Camp</h3>
+                </div>
+
+                <div class="camp-row">
+                    <div class="camp-left">
+                        <div class="camp-icon">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+
+                        <div>
+                            <h4>AIIMS Blood Donation Camp</h4>
+                            <p>New Delhi • 28 May 2025</p>
+                        </div>
+                    </div>
+                    <button onclick="window.location.href='register.html'"> Register </button>
+                </div>
+            </div>
+
+                <!-- VISITED CAMPS -->
+            <div class="single-card">
+                <div class="card-header">
+                    <h3>Visited Camps</h3>
+                </div>
+
+                <div class="camp-row">
+                    <div class="camp-left">
+                        <div class="camp-icon">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+
+                        <div>
+                            <h4>Community Blood Drive</h4>
+                            <p>New Delhi • 20 Nov 2024</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- HISTORY -->
+            <div class="single-card">
+                <div class="card-header">
+                    <h3>Recent Donations</h3>
+                </div>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Location</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>25 Feb 2025</td>
+                                <td>AIIMS Blood Camp</td>
+                                <td>
+                                    <span class="completed">Completed</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>20 Nov 2024</td>
+                                <td>Community Drive</td>
+                                <td>
+                                    <span class="completed">Completed</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>15 Aug 2024</td>
+                                <td>Life Saver Camp</td>
+                                <td>
+                                    <span class="completed">Completed</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="cta">
+                <h2>Every donation creates another heartbeat.</h2>
+            </div>
+        </main>
+    </section>
+
+    <script>
+    document.getElementById("userName").innerText =
+    localStorage.getItem("name") || "User";
+
+    document.getElementById("userBlood").innerText =
+    localStorage.getItem("blood") || "Not Available";
+
+    document.getElementById("userEmail").innerText =
+    localStorage.getItem("email") || "Not Available";
+
+    document.getElementById("userPhone").innerText =
+    localStorage.getItem("phone") || "Not Available";
+
+    document.getElementById("userLocation").innerText =
+    `${localStorage.getItem("city") || ""}, ${localStorage.getItem("state") || ""}`;
+
+    document.getElementById("userDob").innerText =
+    localStorage.getItem("dob") || "Not Available";
+
+        const sideButtons = document.querySelectorAll(".side-btn");
+
+sideButtons.forEach(button => {
+    button.addEventListener("click", () => {
+        sideButtons.forEach(btn => {
+            btn.classList.remove("active");
+        });
+        button.classList.add("active");
+    });
+});
+
+const menuToggle = document.querySelector(".menu-toggle");
+
+const navLinks = document.querySelector(".nav-links");
+
+menuToggle.addEventListener("click",()=>{
+    navLinks.classList.toggle("show");
+});
+
+function logoutUser(){
+    localStorage.clear();
+    window.location.href="login.html";
+}
+
+const localReply = getLocalReply(userMessage);
+if(localReply){
+    addBotMessage(localReply);
+}
+else{
+    callAI(userMessage);
+}
+
+function getLocalReply(message){
+    message = message.toLowerCase();
+    if(message.includes("tattoo")){
+        return "Wait 6 months after tattoo.";
+    }
+    if(message.includes("weight")){
+        return "Minimum weight is 50kg.";
+    }
+    return null;
+}
+    </script>
+</body>
+</html>

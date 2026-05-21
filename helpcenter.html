@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BloodBridge | Help Center</title>
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="helpcenter_styles.css">
+</head>
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+    <nav>
+    <div class="logo">
+        <i class="fa-solid fa-heart-pulse"></i>
+        <div>
+            <h2>Blood <span>Bridge</span></h2>
+            <p>Connect. Donate. Save Lives.</p>
+        </div>
+    </div>
+
+    <div class="nav-links">
+        <a href="index.html">HOME</a>
+        <a href="emergency.html">EMERGENCY</a>
+        <a href="about.html">ABOUT</a>
+        <a class="active" href="helpcenter.html">HELP CENTER</a>
+        <a href="dashboard.html">DASHBOARD</a>
+    </div>
+
+    <div class="menu-toggle">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+
+    <button class="register-btn" onclick="window.location.href='register.html'">
+        <i class="fa-regular fa-user"></i> REGISTER
+    </button>
+</nav>
+
+<!-- ================= AI HELP CENTER ================= -->
+<section class="faq-page">
+    <div class="help-hero">
+        <p class="mini-title">AI-POWERED HELP</p>
+        <div class="drop-line">
+            <span></span>
+            <i class="fa-solid fa-droplet"></i>
+            <span></span>
+        </div>
+
+        <h1>
+            Ask <span>BloodBot</span>
+        </h1>
+        <p class="top-subtext">
+            Get instant answers about blood donation, eligibility, safety, diet, and more.
+        </p>
+    </div>
+
+    <!-- QUICK QUESTIONS -->
+    <div class="quick-questions">
+        <button onclick="askBot('after medication')">
+            💊 After medication?
+        </button>
+
+        <button onclick="askBot('diet')">
+            🥗 Pre-donation diet
+        </button>
+
+        <button onclick="askBot('frequency')">
+            🔄 Donation frequency
+        </button>
+
+        <button onclick="askBot('hurt')">
+            😬 Does it hurt?
+        </button>
+
+        <button onclick="askBot('tattoo')">
+            🖋️ Tattoo & donation
+        </button>
+
+        <button onclick="askBot('after donation')">
+            🩸 After donation
+        </button>
+    </div>
+
+    <!-- CHATBOT -->
+    <div class="bloodbot-container">
+
+        <!-- HEADER -->
+        <div class="bloodbot-header">
+            <div class="bot-profile">
+                <div class="bot-icon">🤖</div>
+
+                <div>
+                    <h3>BloodBot AI</h3>
+                    <p>● Online</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- CHAT AREA -->
+        <div class="bloodbot-messages" id="chat-messages">
+            <div class="chat-row bot">
+                <div class="chat-avatar">🤖</div>
+
+                <div class="chat-bubble">
+                    Hi 👋 I'm BloodBot. Ask me anything about blood donation, eligibility, food, safety, or camps.
+                </div>
+            </div>
+        </div>
+
+        <!-- INPUT -->
+        <div class="bloodbot-input-area">
+            <input type="text" id="chat-in" placeholder="Ask anything about blood donation..." onkeydown="if(event.key==='Enter')sendChat()">
+            <button onclick="sendChat()">
+                <i class="fa-solid fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+        <!-- ================= HELP CENTER LIST ================= -->
+        <div class="faq-heading">
+            <div class="drop-line">
+                <span></span>
+                <i class="fa-solid fa-droplet"></i>
+                <span></span>
+            </div>
+            <h2>
+                <span>Help Center</span>
+            </h2>
+        </div>
+
+        <!-- HELP CENTER ITEMS -->
+        <div class="faq-container">
+
+            <!-- HELP CENTER ITEM -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <div class="faq-left">
+                        <span>1</span>
+                        <h3>How long does blood donation take?</h3>
+                    </div>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+
+                <div class="faq-answer">
+                    The complete process usually takes around 30–45 minutes, while the actual blood collection takes only 8–10 minutes.
+                </div>
+            </div>
+
+            <!-- HELP CENTER ITEM -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <div class="faq-left">
+                        <span>2</span>
+                        <h3>Who can donate blood?</h3>
+                    </div>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+
+                <div class="faq-answer">
+                    Healthy adults aged 18–65 with sufficient hemoglobin and body weight can generally donate blood.
+                </div>
+            </div>
+
+            <!-- HELP CENTER ITEM -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <div class="faq-left">
+                        <span>3</span>
+                        <h3>Is blood donation safe?</h3>
+                    </div>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+
+                <div class="faq-answer">
+                    Yes. Sterile disposable needles are used, making the process completely safe.
+                </div>
+            </div>
+
+            <!-- HELP CENTER ITEM -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <div class="faq-left">
+                        <span>4</span>
+                        <h3>How often can I donate blood?</h3>
+                    </div>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+
+                <div class="faq-answer">
+                    Whole blood donation is usually allowed every 56 days for healthy adults.
+                </div>
+            </div>
+
+            <!-- HELP CENTER ITEM -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <div class="faq-left">
+                        <span>5</span>
+                        <h3>
+                            Will I get weak after donating?
+                        </h3>
+                    </div>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+
+                <div class="faq-answer">
+                    Most people feel normal after resting briefly and drinking enough fluids.
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="faq-cta">
+            <div class="cta-left">
+                <div class="cta-icon">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                <div>
+                    <h2>Still have questions?</h2>
+                    <p>
+                        We’re here to help you save more lives.
+                    </p>
+                </div>
+            </div>
+
+            <div class="cta-buttons">
+                <a href="emergency.html" class="bottom-btn">
+                    <i class="fa-solid fa-headset"></i> CONTACT SUPPORT</a>
+                <a href="register.html" class="bottom-btn">
+                    <i class="fa-solid fa-users"></i> REGISTER NOW</a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const menuToggle =
+        document.querySelector(".menu-toggle");
+        const navLinks =
+        document.querySelector(".nav-links");
+
+        menuToggle.addEventListener("click",()=>{
+            navLinks.classList.toggle("show");
+        });
+
+        /* FAQ ACCORDION */
+        const faqItems =document.querySelectorAll(".faq-item");
+
+        faqItems.forEach(item=>{
+            const question =item.querySelector(".faq-question");
+            question.addEventListener("click",()=>{
+                item.classList.toggle("open");
+            });
+        });
+
+        const botReplies = {
+            "after medication":
+            "You can usually donate blood after taking paracetamol if you feel healthy and have no fever.",
+            "diet":
+            "Eat iron-rich foods and drink plenty of water before donating blood.",
+            "frequency":
+            "Most people can donate blood every 3 months.",
+            "hurt":
+            "Blood donation usually causes only mild temporary discomfort.",
+            "tattoo":
+            "You may donate blood after tattoos if enough healing time has passed.",
+            "after donation":
+            "Drink plenty of water, avoid heavy exercise, and eat iron-rich foods after donation."
+        };
+
+        function appendMessage(type,text){
+            const chat =document.getElementById("chat-messages");
+            const row =document.createElement("div");
+            row.className ='chat-row ' + type;
+            row.innerHTML = `
+            <div class="chat-avatar">
+            ${type==="bot" ? "🤖" : "🧑"}
+            </div>
+            <div class="chat-bubble">
+            ${text}
+            </div>
+            `;
+
+            chat.appendChild(row);
+            chat.scrollTop =chat.scrollHeight;
+        }
+
+        function sendChat(){
+            const input =document.getElementById("chat-in");
+            const text =input.value.trim();
+
+            if(!text) return;
+            appendMessage("user",text);
+            input.value = "";
+
+            let reply ="I'm sorry, I don't have information about that yet.";
+            for(let key in botReplies){
+                if(text.toLowerCase().includes(key)){
+                    reply = botReplies[key];
+                    break;
+                }
+            }
+            setTimeout(()=>{
+                appendMessage("bot",reply);},600);
+        }
+
+        function askBot(question){
+            appendMessage("user",question);
+            let reply =
+            botReplies[question] ||
+            "I'm sorry, I don't have information about that yet.";
+            setTimeout(()=>{
+                appendMessage("bot",reply);
+        });
+        }
+
+</script>
+
+</body>
+
+</html>

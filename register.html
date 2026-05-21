@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BloodBridge | Register</title>
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="register_styles.css">
+</head>
+
+<body>
+    <!-- ================= NAVBAR ================= -->
+    <nav>
+        <div class="logo">
+            <i class="fa-solid fa-heart-pulse"></i>
+            <div>
+                <h2>
+                    Blood<span>Bridge</span>
+                </h2>
+                <p>Connect. Donate. Save Lives.</p>
+            </div>
+        </div>
+
+        <div class="nav-links">
+            <a href="home.html">HOME</a>
+            <a href="emergency.html">EMERGENCY</a>
+            <a href="about.html">ABOUT</a>
+            <a href="helpcenter.html">HELP CENTER</a>
+            <a href="dashboard.html">DASHBOARD</a>
+        </div>
+
+        <div class="menu-toggle">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <button class="register-btn active-btn">
+            <i class="fa-regular fa-user"></i>REGISTER
+        </button>
+    </nav>
+
+    <!-- ================= REGISTER SECTION ================= -->
+    <section class="register-section">
+        <div class="section-top">
+            <div class="mini-title">
+                <span></span>
+                JOIN BLOOD BRIDGE
+                <span></span>
+            </div>
+            <h1>Register as a <span>Donor</span></h1>
+
+            <p>
+                Be a hero. Your donation can save up to 3 lives.
+                <i class="fa-solid fa-heart"></i>
+            </p>
+        </div>
+
+        <!-- ================= FORM CARD ================= -->
+        <div class="register-card">
+            <!-- STEP BAR -->
+            <div class="step-bar">
+                <div class="step active" id="step-indicator-1">
+                    <div class="step-number">1</div>
+                    <div class="step-text">Personal Details</div>
+                </div>
+
+                <div class="line"></div>
+                <div class="step" id="step-indicator-2">
+                    <div class="step-number">2</div>
+                    <div class="step-text">Medical Information</div>
+                </div>
+
+                <div class="line"></div>
+                <div class="step" id="step-indicator-3">
+                    <div class="step-number">3</div>
+                    <div class="step-text">Confirm & Submit</div>
+                </div>
+            </div>
+
+            <!-- FORM -->
+            <form id="registerForm">
+    <!-- Step 1 -->
+                <div class="form-step active" id="fstep-1">
+                    <div class="form-grid">
+
+                        <div class="input-box">
+                            <label>FIRST NAME</label>
+                            <div class="input-field">
+                                <i class="fa-regular fa-user"></i>
+                                <input type="text" id="r-fname" placeholder="Enter your first name">
+                            </div>
+                        </div>
+
+                        <div class="input-box">
+                            <label>LAST NAME</label>
+                            <div class="input-field">
+                                <i class="fa-regular fa-user"></i>
+                                <input type="text" id="r-lname" placeholder="Enter your last name">
+                            </div>
+                        </div>
+
+                        <div class="input-box">
+                            <label>DATE OF BIRTH</label>
+                            <div class="input-field">
+                                <i class="fa-regular fa-calendar"></i>
+                                <input type="date" id="r-dob">
+                            </div>
+                        </div>
+
+                        <div class="input-box">
+                            <label>GENDER</label>
+                            <div class="input-field">
+                                <i class="fa-solid fa-venus-mars"></i>
+                                <select class="form-select">
+                                    <option>Select gender</option>
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="input-box">
+                            <label>PHONE NUMBER</label>
+                            <div class="input-field">
+                                <i class="fa-solid fa-phone"></i>
+                                <input type="tel" id="r-phone" placeholder="Enter phone number">
+                            </div>
+                        </div>
+
+                        <div class="input-box">
+                            <label>EMAIL ADDRESS</label>
+                            <div class="input-field">
+                                <i class="fa-regular fa-envelope"></i>
+                                <input type="email" id="r-email" placeholder="you@email.com">
+                            </div>
+                        </div>
+
+                        <div class="input-box full-width">
+                            <label>ADDRESS</label>
+                            <div class="input-field">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <input type="text" id="r-address" placeholder="Street, Colony, District">
+                            </div>
+                        </div>
+
+                        <div class="input-box">
+                            <label>CITY</label>
+                            <div class="input-field">
+                                <i class="fa-regular fa-building"></i>
+                                <input type="text" id="r-city" placeholder="Enter your city">
+                            </div>
+                        </div>
+
+                        <div class="input-box">
+                            <label>STATE</label>
+                            <div class="input-field">
+                                <i class="fa-regular fa-map"></i>
+                                <select class="form-select" id="r-state">
+                                    <option>Select State</option>
+                                    <option>Andhra Pradesh</option><option>Arunachal Pradesh</option><option>Assam</option>
+                                    <option>Bihar</option><option>Chhattisgarh</option><option>Goa</option><option>Gujarat</option>
+                                    <option>Haryana</option><option>Himachal Pradesh</option><option>Jharkhand</option>
+                                    <option>Karnataka</option><option>Kerala</option><option>Madhya Pradesh</option>
+                                    <option>Maharashtra</option><option>Manipur</option><option>Meghalaya</option>
+                                    <option>Mizoram</option><option>Nagaland</option><option>Odisha</option><option>Punjab</option>
+                                    <option>Rajasthan</option><option>Sikkim</option><option>Tamil Nadu</option>
+                                    <option>Telangana</option><option>Tripura</option><option>Uttar Pradesh</option>
+                                    <option>Uttarakhand</option><option>West Bengal</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-nav">
+                        <button type="button" class="btn-primary" onclick="goStep(2)"> Next → </button>
+                    </div>
+                </div> 
+                
+      <!-- Step 2 -->
+                <div class="form-step" id="fstep-2">
+                    <div class="form-group form-full">
+                    <label class="form-label">Blood Group</label>
+                    <div class="blood-type-grid">
+                        <button class="blood-type-btn" onclick="selectBlood(this)">A+</button>
+                        <button class="blood-type-btn" onclick="selectBlood(this)">A−</button>
+                        <button class="blood-type-btn" onclick="selectBlood(this)">B+</button>
+                        <button class="blood-type-btn" onclick="selectBlood(this)">B−</button>
+                        <button class="blood-type-btn" onclick="selectBlood(this)">O+</button>
+                        <button class="blood-type-btn" onclick="selectBlood(this)">O−</button>
+                        <button class="blood-type-btn" onclick="selectBlood(this)">AB+</button>
+                        <button class="blood-type-btn" onclick="selectBlood(this)">AB−</button>
+                    </div>
+                    </div>
+                    <div class="form-grid">
+                    <div class="form-group">
+                        <label class="form-label">Weight (kg)</label>
+                        <input class="input-field" type="number" placeholder="65" id="r-weight"/>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Last Donation Date</label>
+                        <input class="input-field" type="date" id="r-lastdon"/>
+                    </div>
+                    <div class="form-group form-full">
+                        <label class="form-label">Do you have any chronic conditions?</label>
+                        <select class="form-select" id="r-chronic">
+                        <option value="none">None</option>
+                        <option>Diabetes (controlled)</option>
+                        <option>Hypertension (controlled)</option>
+                        <option>Asthma</option>
+                        <option>Other (specify below)</option>
+                        </select>
+                    </div>
+                    <div class="form-group form-full">
+                        <label class="form-label">Allergies / Medications</label>
+                        <input class="input-field" placeholder="None, or list here..." id="r-meds"/>
+                    </div>
+                    <div class="form-group form-full">
+                        <label>
+                        <input type="checkbox" onclick="validateConsent()" id="r-consent"/>
+                        I confirm I have not had alcohol in the last 24 hours, I am in good health today, and I consent to my data being used for donor matching.
+                        </label>
+                    </div>
+                    </div>
+                    <div class="form-nav">
+                    <button type="button" class="btn-secondary" onclick="goStep(1)">← Back</button>
+                    <button type="button" class="btn-primary" onclick="submitRegistration()">Next →</button>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="form-step" id="fstep-3">
+                    <div>
+                    <h3>Ready to Register!</h3>
+                    <p>
+                        You're about to join over 1.2 million donors who are actively saving lives across India. Your profile will go live immediately after verification.
+                    </p>
+                    <div>
+                        <div id="reg-summary">SUMMARY</div>
+                        <div></div>
+                    </div>
+                </div>
+                <div class="form-nav">
+                    <button type="button" class="btn-secondary" onclick="goStep(2)">← Back</button>
+                    <button type="button" class="btn-primary" onclick="completeRegistration()">Complete Registration</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+        <!-- ================= LOGIN CTA ================= -->
+        <div class="login-card">
+            <div class="login-left">
+                <div class="heart-icon">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+
+                <div>
+                    <h3>Already registered?</h3>
+                    <p>Login to your account to manage your donations and preferences.</p>
+                </div>
+            </div>
+
+            <button class="login-btn" onclick="window.location.href='login.html'">
+                <i class="fa-regular fa-user"></i>LOGIN NOW
+            </button>
+        </div>
+    </section>
+   <script>
+
+/* ================= BLOOD TYPE ================= */
+function selectBlood(button){
+    event.preventDefault();
+    document
+    .querySelectorAll(".blood-type-btn")
+    .forEach(btn=>{
+        btn.classList.remove("active");
+    });
+    button.classList.add("active");
+}
+
+/* ================= STEP NAVIGATION ================= */
+
+function goStep(step){
+    /* HIDE ALL STEPS */
+    document
+    .querySelectorAll(".form-step")
+    .forEach(section=>{
+        section.classList.remove("active");
+    });
+
+    /* SHOW CURRENT STEP */
+    document
+    .getElementById(`fstep-${step}`)
+    .classList.add("active");
+
+    /* RESET STEP INDICATORS */
+    document
+    .querySelectorAll(".step")
+    .forEach(item=>{
+        item.classList.remove("active");
+    });
+
+    /* ACTIVATE CURRENT INDICATOR */
+    document
+    .getElementById(`step-indicator-${step}`)
+    .classList.add("active");
+}
+
+/* ================= SUBMIT ================= */
+function submitRegistration(){
+    const fname =
+    document.getElementById("r-fname")?.value || "";
+    const lname =
+    document.getElementById("r-lname")?.value || "";
+    const name =
+    `${fname} ${lname}`.trim() || "-";
+    const phone =
+    document.getElementById("r-phone")?.value || "-";
+    const city =
+    document.getElementById("r-city")?.value || "-";
+    const blood =
+    document.querySelector(".blood-type-btn.active")
+    ?.innerText || "-";
+    const weight =
+    document.getElementById("r-weight")?.value || "-";
+    const chronic =
+    document.getElementById("r-chronic")?.value || "None";
+    const dob =
+    document.getElementById("r-dob")?.value || "-";
+    const email =
+    document.getElementById("r-email")?.value || "-";
+    const address =
+    document.getElementById("r-address")?.value || "-";
+    const state =
+    document.getElementById("r-state")?.value || "-";
+    
+    document.getElementById("reg-summary")
+    .innerHTML = `
+    <div class="summary-item">
+        <span>Name</span>
+        <strong>${name}</strong>
+    </div>
+
+    <div class="summary-item">
+        <span>Phone</span>
+        <strong>${phone}</strong>
+    </div>
+
+    <div class="summary-item">
+        <span>City</span>
+        <strong>${city}</strong>
+    </div>
+
+    <div class="summary-item">
+        <span>Blood Group</span>
+        <strong>${blood}</strong>
+    </div>
+
+    <div class="summary-item">
+        <span>Weight</span>
+        <strong>${weight} kg</strong>
+    </div>
+
+    <div class="summary-item">
+        <span>Health Condition</span>
+        <strong>${chronic}</strong>
+    </div>
+    `;
+
+    localStorage.setItem("name", name);
+    localStorage.setItem("phone", phone);
+    localStorage.setItem("city", city);
+    localStorage.setItem("blood", blood);
+    localStorage.setItem("dob", dob);
+    localStorage.setItem("email", email);
+    localStorage.setItem("address", address);
+    localStorage.setItem("state", state);
+    goStep(3);
+}
+
+function completeRegistration(){
+    alert(
+    "Registration Completed Successfully!"
+    );
+
+    document
+    .querySelector("form")
+    .reset();
+    document
+    .querySelectorAll(".blood-type-btn")
+    .forEach(btn=>{
+        btn.classList.remove("active");
+    });
+
+    document
+    .getElementById("reg-summary")
+    .innerHTML = "SUMMARY";
+    goStep(1);
+}
+
+/* ================= MOBILE MENU ================= */
+
+const menuToggle =
+document.querySelector(".menu-toggle");
+const navLinks =
+document.querySelector(".nav-links");
+menuToggle.addEventListener("click",()=>{
+    navLinks.classList.toggle("show");
+});
+
+</script>
+</body>
+</html>

@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BloodBridge | Home</title>
+
+<!-- GOOGLE FONTS -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- FONT AWESOME -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+<link rel="stylesheet" href="index_styles.css">
+
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav>
+    <div class="logo">
+        <i class="fa-solid fa-heart-pulse"></i>
+        <div>
+            <h2>Blood <span>Bridge</span></h2>
+            <p>Connect. Donate. Save Lives.</p>
+        </div>
+    </div>
+
+    <div class="nav-links">
+        <a class="active" href="index.html">HOME</a>
+        <a href="emergency.html">EMERGENCY</a>
+        <a href="about.html">ABOUT</a>
+        <a href="helpcenter.html">HELP CENTER</a>
+        <a href="dashboard.html">DASHBOARD</a>
+    </div>
+
+    <div class="menu-toggle">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+
+    <button class="register-btn" onclick="window.location.href='register.html'">
+        <i class="fa-regular fa-user"></i>REGISTER
+    </button>
+</nav>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+    <div class="hero-grid">
+
+        <!-- LEFT -->
+        <div class="left-content">
+            <div class="tag">• AVAILABLE 24/7</div>
+            <h1>
+                One Drop Can <br> <span>Save Three Lives.</span>
+            </h1>
+
+            <div class="line"></div>
+            <p>
+                Blood Bridge connects verified blood donors with patients in need instantly, intelligently, and across India's 700+ districts.
+            </p>
+
+            <div class="hero-buttons">
+                <button class="primary-btn" onclick="window.location.href='register.html'">
+                    <i class="fa-solid fa-droplet"></i> BECOME A DONOR
+                </button>
+
+                <button class="secondary-btn" onclick="window.location.href='emergency.html'">
+                    <i class="fa-solid fa-bolt"></i> EMERGENCY REQUEST
+                </button>
+            </div>
+        </div>
+
+        <!-- CENTER -->
+        <div class="map-box">
+            <img src="india_map.png" class="map" alt="India network map">
+        </div>
+
+        <!-- RIGHT -->
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fa-solid fa-users"></i>
+                </div>
+                <div>
+                    <h2>1,25,750+</h2>
+                    <p>Registered Donors</p>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+
+                <div>
+                    <h2>28,900+</h2>
+                    <p>Lives Saved</p>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fa-solid fa-map-location-dot"></i>
+                </div>
+
+                <div>
+                    <h2>28</h2>
+                    <p>States & UTs Covered</p>
+                </div>
+
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fa-solid fa-building"></i>
+                </div>
+
+                <div>
+                    <h2>700+</h2>
+                    <p>Districts Covered</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= TICKER ================= -->
+
+<section class="ticker-section">
+    <div class="ticker-wrap">
+        <div class="ticker" id="ticker">
+
+            <span>Every Drop Counts</span>
+            <span class="dot">•</span>
+
+            <span>Be Someone's Hero Today</span>
+            <span class="dot">•</span>
+
+            <span>Your Blood, Their Future</span>
+            <span class="dot">•</span>
+
+            <span>One Donation · Three Lives Saved</span>
+            <span class="dot">•</span>
+
+            <span>Blood Can't Be Manufactured</span>
+            <span class="dot">•</span>
+
+            <span>Donate Blood · Save Lives</span>
+            <span class="dot">•</span>
+
+            <span>Heroes Donate Blood</span>
+            <span class="dot">•</span>
+
+            <span>Save Lives With One Simple Act</span>
+            <span class="dot">•</span>
+
+        </div>
+    </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section class="about">
+    <div class="about-grid">
+        <div class="heart-icon">
+            <i class="fa-solid fa-heart-pulse"></i>
+        </div>
+
+        <div class="about-content">
+            <h2>
+                <span>Together, </span>We Can Save More Lives
+            </h2>
+
+            <div class="about-line"></div>
+            <p>Every donation creates a ripple of hope. 
+               Join our community of heroes and become the reason someone gets a second chance at life.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- ================= ACTIVE REQUESTS ================= -->
+<section class="requests-section">
+    <div class="requests-top">
+        <div class="requests-heading">
+            <p class="mini-title">• LIVE FEED</p>
+            <h2>
+                Active Nearby <br><span>Requests</span>
+            </h2>
+
+            <p class="requests-subtext">
+                Real-time blood requirements from hospitals and patients in your region.
+            </p>
+        </div>
+
+        <!-- FILTERS -->
+        <div class="blood-filters">
+            <button class="filter-btn active" data-group="all">All</button>
+            <button class="filter-btn" data-group="A+">A+</button>
+            <button class="filter-btn" data-group="A-">A-</button>
+            <button class="filter-btn" data-group="B+">B+</button>
+            <button class="filter-btn" data-group="B-">B-</button>
+            <button class="filter-btn" data-group="O+">O+</button>
+            <button class="filter-btn" data-group="O-">O-</button>
+            <button class="filter-btn" data-group="AB+">AB+</button>
+            <button class="filter-btn" data-group="AB-">AB-</button>
+        </div>
+    </div>
+
+    <!-- REQUEST CARDS -->
+    <div class="request-grid">
+        <!-- CARD -->
+        <div class="request-card" data-blood="A+">
+            <div class="card-top">
+                <div class="blood-badge">A+</div>
+                <div class="status critical">CRITICAL</div>
+            </div>
+            <h3>KEM Hospital</h3>
+            <p class="location">
+                <i class="fa-solid fa-location-dot"></i> Mumbai, MH • 1.2 km
+            </p>
+
+            <div class="card-line"></div>
+            <p class="units"> Units needed: <span>3</span> </p>
+
+            <button class="donate-btn"> Respond & Donate
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+        </div>
+
+        <!-- CARD -->
+        <div class="request-card" data-blood="O-">
+            <div class="card-top">
+                <div class="blood-badge">O-</div>
+                <div class="status critical">CRITICAL</div>
+            </div>
+            <h3>AIIMS Delhi</h3>
+            <p class="location">
+                <i class="fa-solid fa-location-dot"></i> New Delhi • 3.4 km
+            </p>
+            <div class="card-line"></div>
+            <p class="units"> Units needed: <span>2</span> </p>
+
+            <button class="donate-btn"> Respond & Donate
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+        </div>
+
+        <!-- CARD -->
+        <div class="request-card" data-blood="B+">
+            <div class="card-top">
+                <div class="blood-badge">B+</div>
+                <div class="status moderate">MODERATE</div>
+            </div>
+            <h3>Apollo Hospitals</h3>
+            <p class="location">
+                <i class="fa-solid fa-location-dot"></i> Chennai • 0.8 km
+            </p>
+            <div class="card-line"></div>
+            <p class="units"> Units needed: <span>1</span> </p>
+
+            <button class="donate-btn"> Respond & Donate
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+        </div>
+
+        <!-- CARD -->
+
+        <div class="request-card" data-blood="AB+">
+            <div class="card-top">
+                <div class="blood-badge">AB+</div>
+                <div class="status normal">NORMAL</div>
+            </div>
+            <h3>Fortis Hospital</h3>
+            <p class="location">
+                <i class="fa-solid fa-location-dot"></i> Bengaluru • 2.1 km
+            </p>
+            <div class="card-line"></div>
+            <p class="units"> Units needed: <span>2</span> </p>
+
+            <button class="donate-btn"> Respond & Donate
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+        </div>
+
+        <!-- CARD -->
+
+        <div class="request-card" data-blood="O+">
+            <div class="card-top">
+                <div class="blood-badge">O+</div>
+                <div class="status critical">CRITICAL</div>
+            </div>
+            <h3>Lilavati Hospital</h3>
+            <p class="location">
+                <i class="fa-solid fa-location-dot"></i> Mumbai • 5.2 km </p>
+            <div class="card-line"></div>
+            <p class="units"> Units needed: <span>4</span> </p>
+
+            <button class="donate-btn"> Respond & Donate
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+        </div>
+
+        <!-- CARD -->
+
+        <div class="request-card" data-blood="A-">
+            <div class="card-top">
+                <div class="blood-badge">A-</div>
+                <div class="status moderate">MODERATE</div>
+            </div>
+            <h3>JIPMER</h3>
+            <p class="location">
+                <i class="fa-solid fa-location-dot"></i> Puducherry • 18 km </p>
+            <div class="card-line"></div>
+            <p class="units">Units needed: <span>1</span> </p>
+
+            <button class="donate-btn"> Respond & Donate
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- ================= QUOTES ================= -->
+<section class="quotes-section">
+    <div class="quotes-bg"></div>
+    <p class="quotes-mini"> WORDS THAT MOVE </p>
+    <h2 class="quotes-title"> Voices That <span>Inspire</span> </h2>
+    <div class="quotes-line"> 
+        <span></span>
+        <i class="fa-solid fa-wave-square"></i>
+        <span></span>
+    </div>
+
+    <!-- QUOTE SLIDER -->
+    <div class="quote-slider">
+        <div class="quote active">
+            <p class="quote-text">
+                <span>“</span>
+                Donating blood is the most precious gift you can give to another human being — the gift of life.
+                <span>”</span>
+            </p>
+            <h4> — WORLD HEALTH ORGANIZATION </h4>
+        </div>
+
+        <div class="quote">
+            <p class="quote-text">
+                <span>“</span>
+                A single pint can save three lives, a single gesture can create a million smiles.
+                <span>”</span>
+            </p>
+            <h4> — RED CROSS </h4>
+        </div>
+
+        <div class="quote">
+            <p class="quote-text">
+                <span>“</span>
+                Heroes come in all forms. Some simply donate blood.
+                <span>”</span>
+            </p>
+            <h4> — BLOOD DONATION CAMPAIGN </h4>
+        </div>
+
+        <div class="quote">
+            <p class="quote-text">
+                <span>“</span>
+                Your blood donation can give someone another chance at life.
+                <span>”</span>
+            </p>
+            <h4> — NATIONAL HEALTH SERVICE </h4>
+        </div>
+
+        <div class="quote">
+            <p class="quote-text">
+                <span>“</span>
+                Blood is meant to circulate. Pass it around.
+                <span>”</span>
+            </p>
+            <h4> — UNKNOWN </h4>
+        </div>
+
+        <div class="quote">
+            <p class="quote-text">
+                <span>“</span>
+                Donate blood and become someone’s silent hero.
+                <span>”</span>
+            </p>
+            <h4> — SAVE LIFE FOUNDATION </h4>
+        </div>
+
+        <div class="quote">
+            <p class="quote-text">
+                <span>“</span>
+                Every blood donor is a lifesaver.
+                <span>”</span>
+            </p>
+            <h4> — WORLD BLOOD DONOR DAY </h4>
+        </div>
+    </div>
+
+    <!-- DOTS -->
+    <div class="quote-dots">
+        <span class="quote-dot active"></span>
+        <span class="quote-dot"></span>
+        <span class="quote-dot"></span>
+        <span class="quote-dot"></span>
+        <span class="quote-dot"></span>
+        <span class="quote-dot"></span>
+        <span class="quote-dot"></span>
+    </div>
+
+    <!-- ARROWS -->
+    <div class="quote-arrows">
+        <button class="quote-btn prev-btn">
+            <i class="fa-solid fa-arrow-left"></i>
+        </button>
+
+        <button class="quote-btn next-btn">
+            <i class="fa-solid fa-arrow-right"></i>
+        </button>
+    </div>
+</section>
+
+<!-- ================= FACTS ================= -->
+<section class="facts-section">
+    <div class="facts-heading">
+        <p class="facts-mini">KNOWLEDGE HUB</p>
+        <h2>
+            Blood Donation<span>Facts</span>
+        </h2>
+        <p class="facts-subtext">Things everyone should know about giving blood.</p>
+    </div>
+
+    <div class="facts-grid">
+
+        <!-- CARD -->
+        <div class="fact-card">
+            <div class="fact-icon">🩸</div>
+            <h3>Every 2 Seconds</h3>
+            <p>
+                Someone in India needs blood. That’s over 43,000 units required every single day nationwide.
+            </p>
+        </div>
+
+        <!-- CARD -->
+        <div class="fact-card">
+            <div class="fact-icon">💉</div>
+            <h3>1 Donation = 3 Lives</h3>
+            <p>
+                Your single donation is separated into red cells, plasma, and platelets — each helping a different patient.
+            </p>
+        </div>
+
+        <!-- CARD -->
+        <div class="fact-card">
+            <div class="fact-icon">⏱️</div>
+            <h3>Just 45 Minutes</h3>
+            <p>
+                The entire donation process takes under an hour. Your body replaces the fluid within 24 hours.
+            </p>
+        </div>
+
+        <!-- CARD -->
+        <div class="fact-card">
+            <div class="fact-icon">🔁</div>
+            <h3>Donate Every 56 Days</h3>
+            <p>
+                Healthy adults can safely donate whole blood every 56 days — that’s up to 6 times a year.
+            </p>
+        </div>
+
+        <!-- CARD -->
+        <div class="fact-card">
+            <div class="fact-icon">🏥</div>
+            <h3>No Substitute Exists</h3>
+            <p>
+                Blood cannot be manufactured artificially. Human donation remains the only source of life-saving blood products.
+            </p>
+        </div>
+
+        <!-- CARD -->
+        <div class="fact-card">
+            <div class="fact-icon">📉</div>
+            <h3>30% Deficit in India</h3>
+            <p>
+                India has a chronic shortfall of nearly 3 million blood units annually, with rural areas most severely affected.
+            </p>
+        </div>
+
+        <!-- CARD -->
+        <div class="fact-card">
+            <div class="fact-icon">❤️</div>
+            <h3>Heart Health Bonus</h3>
+            <p>
+                Regular donors have a lower risk of heart attacks. Donating blood reduces iron levels and oxidative stress.
+            </p>
+        </div>
+
+        <!-- CARD -->
+        <div class="fact-card">
+            <div class="fact-icon">🧪</div>
+            <h3>Free Health Checkup</h3>
+            <p>
+                Every donation includes screening for HIV, hepatitis B & C, syphilis, and malaria — completely free.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+
+    <!-- TOP -->
+    <div class="footer-top">
+
+        <!-- LEFT -->
+        <div class="footer-brand">
+            <div class="footer-logo">
+                <i class="fa-solid fa-heart-pulse"></i>
+                <h2>
+                    Blood <span>Bridge</span>
+                </h2>
+            </div>
+
+            <div class="footer-line"></div>
+            <p>
+                Connecting donors. Saving lives. Building a healthier India, one donation at a time.
+            </p>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="footer-links">
+
+            <h3>QUICK LINKS</h3>
+            <div class="footer-small-line"></div>
+            <a href="index.html">
+                <i class="fa-solid fa-angle-right"></i>Home
+            </a>
+
+            <a href="emergency.html">
+                <i class="fa-solid fa-angle-right"></i>Emergency
+            </a>
+
+            <a href="about.html">
+                <i class="fa-solid fa-angle-right"></i>About Us
+            </a>
+
+            <a href="helpcenter.html">
+                <i class="fa-solid fa-angle-right"></i>Help Center
+            </a>
+
+            <a href="dashboard.html">
+                <i class="fa-solid fa-angle-right"></i>Dashboard
+            </a>
+        </div>
+    </div>
+
+    <!-- MIDDLE -->
+    <div class="footer-middle">
+
+        <!-- CARD -->
+        <div class="footer-card">
+            <div class="footer-icon">
+                <i class="fa-solid fa-headset"></i>
+            </div>
+
+            <div>
+                <h4>24/7 SUPPORT</h4>
+                <p>
+                    We’re here to help, anytime.
+                </p>
+                <span>1800-123-4567</span>
+            </div>
+        </div>
+
+        <!-- CARD -->
+        <div class="footer-card">
+            <div class="footer-icon">
+                <i class="fa-regular fa-envelope"></i>
+            </div>
+
+            <div>
+                <h4>EMAIL US</h4>
+                <p>
+                    Reach out to us anytime.
+                </p>
+                <span>support@bloodbridge.org</span>
+            </div>
+        </div>
+
+        <!-- CARD -->
+        <div class="footer-card">
+            <div class="footer-icon">
+                <i class="fa-solid fa-location-dot"></i>
+            </div>
+
+            <div>
+                <h4>OUR COVERAGE</h4>
+                <p>
+                    Serving 700+ districts across India.
+                </p>
+                <span>28 States & UTs</span>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- BOTTOM -->
+    <div class="footer-bottom">
+        <p>
+            <span>©</span>2025 Blood Bridge. All rights reserved.
+        </p>
+    </div>
+
+</footer>
+
+<script>
+
+const ticker = document.getElementById("ticker");
+
+/* DUPLICATE CONTENT AUTOMATICALLY */
+ticker.insertAdjacentHTML(
+    "beforeend",
+    ticker.innerHTML
+);
+
+/* OPTIONAL PAUSE ON HOVER */
+ticker.addEventListener("mouseenter",()=>{
+    ticker.style.animationPlayState = "paused";
+
+});
+
+ticker.addEventListener("mouseleave",()=>{
+    ticker.style.animationPlayState = "running";
+
+});
+
+/* ================= FILTERS ================= */
+const filterButtons =
+document.querySelectorAll(".filter-btn");
+const requestCards =
+document.querySelectorAll(".request-card");
+
+filterButtons.forEach(button=>{
+    button.addEventListener("click",()=>{
+        filterButtons.forEach(btn=>{
+            btn.classList.remove("active");
+        });
+
+        button.classList.add("active");
+        const bloodGroup =
+        button.dataset.group;
+
+        requestCards.forEach(card=>{
+            if(
+                bloodGroup === "all" ||
+                card.dataset.blood === bloodGroup
+            ){
+                card.style.display = "block";
+            }else{
+                card.style.display = "none";
+            }
+        });
+    });
+});
+
+/* ================= QUOTES ================= */
+const quotes =
+document.querySelectorAll(".quote");
+const dots =
+document.querySelectorAll(".quote-dot");
+const prevBtn =
+document.querySelector(".prev-btn");
+const nextBtn =
+document.querySelector(".next-btn");
+
+let currentQuote = 0;
+function showQuote(index){
+    quotes.forEach((quote)=>{
+        quote.classList.remove("active");
+    });
+
+    dots.forEach((dot)=>{
+        dot.classList.remove("active");
+    });
+
+    quotes[index].classList.add("active");
+    dots[index].classList.add("active");
+}
+
+function nextQuote(){
+    currentQuote = (currentQuote + 1) % quotes.length;
+    showQuote(currentQuote);
+}
+
+function prevQuote(){
+    currentQuote = (currentQuote - 1 + quotes.length) % quotes.length;
+    showQuote(currentQuote);
+}
+
+nextBtn.addEventListener("click",nextQuote);
+prevBtn.addEventListener("click",prevQuote);
+dots.forEach((dot,index)=>{
+    dot.addEventListener("click",()=>{
+        currentQuote = index;
+        showQuote(currentQuote);
+    });
+});
+
+/* AUTO SLIDE */
+setInterval(nextQuote,5000);
+
+/* MOBILE MENU */
+const menuToggle =
+document.querySelector(".menu-toggle");
+const navLinks =
+document.querySelector(".nav-links");
+menuToggle.addEventListener("click",()=>{
+    navLinks.classList.toggle("show");
+});
+
+</script>
+
+</body>
+</html>
