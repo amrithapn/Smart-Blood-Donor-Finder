@@ -81,5 +81,3 @@ This project can be hosted using GitHub Pages:
 
 ## Author
 * **P N Amritha**
-* **Krishnapriya V**
-* **Gagan Chandran**
